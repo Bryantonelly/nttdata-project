@@ -9,16 +9,16 @@ import lombok.Setter;
 
 @Entity
 @Getter @Setter
-public class Client {
+public class Customer {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int clientId; // ID CLIENTE
+    private int customerId; // ID CLIENTE
     private String documentType; // TIPO DOCUMENTO
     private String documentNumber; // NUM DOCUMENTO
-    private ClientType clientType; // tipoCliente; enum : personal o empresarial
+    private CustomerType customerType; // tipoCliente; enum : personal o empresarial
 
 
-    public enum ClientType {
+    public enum CustomerType {
         PERSONAL, // personal
         BUSINESS // empresarial
     }
